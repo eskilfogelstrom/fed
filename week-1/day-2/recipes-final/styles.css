@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background-image: url('images/food.png');
+    font-family: 'Arial', sans-serif;
+}
+
+.site-header {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 36px;
+}
+
+.recipe-list {
+    padding: 60px;
+}
+
+.recipe-list-item {
+    padding: 30px;
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    width: 30%;
+}
+
+.recipe-list-item:hover {
+    background: #f8f8f8;
+}
+
+.recipe-list-item img {
+    width: 100%;
+    height: auto;
+}
+
+.recipe {
+    background: #fff;
+    padding: 30px;
+    margin: 60px;
+}
+
+.recipe-image {
+    width: 400px;
+    height: auto;
+}
