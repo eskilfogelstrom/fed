@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>CSS layouts</h1>
+        <h2>display</h2>
+        <h3>inline</h3>
+        Life is like a <span class="inline">box</span> of chocolate
+        <h3>inline-block</h3>
+        Life is like a <span class="inline-block">box</span> of chocolate
+        <h3>block</h3>
+        Life is like a <span class="block">box</span> of chocolate
+        <h2>CSS Box Model</h2>
+        <h3>content-box</h3>
+        <div class="content-box">width + padding + border</div>
+        <h3>border-box</h3>
+        <div class="border-box">width - padding - border</div>
+        <h2>Flexbox & grid</h2>
+        <h3>horizontal</h3>
+        <h4>flexbox</h4>
+        <div class="horizontal-flex">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Really really long menu item text that could potentially go on forever</div>
+            <div>Login</div>
+        </div>
+        <h4>grid</h4>
+        <div class="horizontal-grid">
+            <div>Home</div>
+            <div>Search</div>
+            <div>Really really long menu item text that could potentially go on forever</div>
+            <div>Login</div>
+        </div>
+        <h3>horizontal & vertical</h3>
+        <h4>grid</h4>
+        <div class="grid-layout">
+            <div class="grid-header">Header</div>
+            <div class="grid-aside">Aside</div>
+            <div class="grid-main">Main</div>
+            <div class="grid-footer">Footer</div>
+        </div>
+        <h4>flex</h4>
+        <div class="flex-layout">
+            <div class="flex-header">Header</div>
+            <div class="flex-aside">Aside</div>
+            <div class="flex-main">Main</div>
+            <div class="flex-footer">Footer</div>
+        </div>
+        <h2>Position</h2>
+        <h3>static (default)</h3>
+        <div class="position-container">
+            <div>1</div>
+            <div>2</div>
+            <div class="position-static">3</div>
+            <div>4</div>
+        </div>
+        <h3>relative</h3>
+        <div class="position-container">
+            <div>1</div>
+            <div>2</div>
+            <div class="position-relative">3</div>
+            <div>4</div>
+        </div>
+        <h3>absolute</h3>
+        <div class="position-container position-container-relative">
+            <div>1</div>
+            <div>2</div>
+            <div class="position-absolute">3</div>
+            <div>4</div>
+        </div>
+    </body>
+</html>
