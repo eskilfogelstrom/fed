@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .inline {
+                background-color: salmon;
+            }
+
+            .inline-block {
+                background-color: salmon;
+                width: 100px;
+                display: inline-block;
+            }
+
+            .block {
+                background-color: salmon;
+                display: block;
+                width: 100px;
+            }
+
+            .content-box {
+                background-color: salmon;
+                padding: 50px;
+                width: 200px;
+            }
+
+            .border-box {
+                background-color: salmon;
+                padding: 50px;
+                width: 200px;
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .horizontal-flex {
+                display: flex;
+            }
+
+            .horizontal-flex div {
+                padding: 10px;
+                background-color: salmon;
+            }
+
+            .horizontal-flex div:last-child {
+                background-color: mediumspringgreen;
+                margin-left: auto;
+            }
+
+            .horizontal-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .layout-grid {
+                display: grid;
+                grid-template-columns: 200px 1fr;
+            }
+
+            .header-grid {
+                grid-column: span 2;
+                background-color: mediumspringgreen;
+                padding: 10px;
+            }
+
+            .footer-grid {
+                grid-column: span 2;
+                background-color: mediumspringgreen;
+                padding: 10px;
+            }
+
+            .position-container {
+                display: flex;
+                position: relative;
+            }
+
+            .position-container div {
+                width: 100px;
+                height: 100px;
+                background-color: salmon;
+            }
+
+            .position-static {
+                top: 50px;
+                left: 50px;
+                position: static;
+                background-color: sandybrown !important;
+            }
+
+            .position-relative {
+                position: relative;
+                top: 50px;
+                left: 50px;
+                background-color: sandybrown !important;
+            }
+
+            .position-absolute {
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                margin-left: -50px;
+                background-color: sandybrown !important;
+            }
+
+            .position-fixed {
+                position: fixed;
+                top: 50px;
+                left: 50px;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Layouts</h1>
+        <h2>display types</h2>
+        <h3>inline</h3>
+        Life is like <span class="inline">box</span> of chocolate
+        <h3>inline-block</h3>
+        Life is like <span class="inline-block">box</span> of chocolate
+        <h3>block</h3>
+        Life is like <span class="block">box</span> of chocolate
+        <h2>box-sizing</h2>
+        <h3>content-box</h3>
+        <div class="content-box">content-box</div>
+        <h3>border-box</h3>
+        <div class="border-box">border-box</div>
+        <h2>horizontal layout</h2>
+        <h3>flexbox</h3>
+        <div class="horizontal-flex">
+            <div>Home</div>
+            <div>Search</div>
+            <div>News</div>
+            <div>Login</div>
+        </div>
+        <h3>grid</h3>
+        <div class="horizontal-grid">
+            <div>Home</div>
+            <div>Search</div>
+            <div>News</div>
+            <div>Login</div>
+        </div>
+        
+        <h2>horizontal & vertical layout</h2>
+        <h3>grid</h3>
+        <div class="layout-grid">
+            <div class="header-grid">Header</div>
+            <div class="menu-grid">Menu</div>
+            <div class="main-grid">Main</div>
+            <div class="footer-grid">Footer</div>
+        </div>
+
+        <h2>Positioning</h2>
+        <h3>static</h3>
+        <div class="position-container">
+            <div>1</div>
+            <div>2</div>
+            <div class="position-static">3</div>
+            <div>4</div>
+        </div>
+        <h3>relative</h3>
+        <div class="position-container">
+            <div>1</div>
+            <div>2</div>
+            <div class="position-relative">3</div>
+            <div>4</div>
+        </div>
+        <h3>absolute</h3>
+        <div class="position-container">
+            <div>1</div>
+            <div>2</div>
+            <div class="position-absolute">3</div>
+            <div>4</div>
+        </div>
+        <h3>fixed</h3>
+        <div class="position-fixed">I'm fixed</div>
+    </body>
+</html>
