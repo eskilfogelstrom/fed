@@ -21,7 +21,7 @@ var answers = [
     'My sources say no',
     'Outlook not so good',
     'Very doubtful',
-]
+];
 
 ball.onclick = function() {
     ball.classList.add('shake');
