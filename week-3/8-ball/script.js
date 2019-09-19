@@ -1,7 +1,7 @@
-const ball = document.getElementById('ball');
-const display = document.getElementById('display');
+var ball = document.getElementById('ball');
+var display = document.getElementById('display');
 
-const answers = [
+var answers = [
     'It is certain',
     'It is decidedly so',
     'Without a doubt',
@@ -23,11 +23,11 @@ const answers = [
     'Very doubtful',
 ]
 
-ball.onclick = () => {
+ball.onclick = function() {
     ball.classList.add('shake');
 };
 
-ball.addEventListener('animationend', () => {
+ball.addEventListener('animationend', function() {
     ball.classList.remove('shake');
 
     display.innerText = answers[Math.floor(Math.random() * answers.length)];
