@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1 id="missionName"></h1>
+        <script>
+            fetch('https://api.spacexdata.com/v3/launches/latest')
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    document.getElementById('missionName').innerHTML = data.mission_name;
+                    console.log(data.mission_name);
+                });
+
+            var person = {
+                name: 'Eskil',
+                age: 1337,
+                dog: {
+                    name: 'Chili'
+                }
+            }
+            // console.log(person.name);
+            // console.log(person.age);
+            // console.log(person.dog.name);
+
+            var names = [
+                'Eskil',
+                'Chili',
+            ];
+
+            // console.log(names[1], names[0]);
+        </script>
+    </body>
+</html>
