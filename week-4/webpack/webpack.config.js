@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -53,6 +54,12 @@ module.exports = {
         ]
     },
     plugins: [
+        new CopyPlugin([{
+            from: 'src/**/*.!(js|html|css)',
+            transformPath: targetPath => {
+                return targetPath.slice(4);
+            },
+        }]),
         new MiniCssExtractPlugin({
             filename: 'style.min.css'
         }),
