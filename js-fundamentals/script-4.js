@@ -1,4 +1,3 @@
-// Finding elements by ID
 var header = document.getElementById('header');
 
 // Accessing children
@@ -8,41 +7,29 @@ console.log(homeLink);
 // Accessing parent
 console.log(homeLink.parentElement);
 
-// Accessing next element
-var aboutLink = homeLink.nextElementSibling
+// Accessing next/previous siblings
+var aboutLink = homeLink.nextElementSibling;
 console.log(aboutLink);
 
-// Accessing previous element
 console.log(aboutLink.previousElementSibling);
 
 // ----
 
-// Selecting by tag name gives us a list elements
 var anchors = document.getElementsByTagName('a');
 console.log(anchors);
 
-// Selecting by class name
 var links = document.getElementsByClassName('link');
 console.log(links);
 
-// Selecting within an element
-console.log(header.getElementsByTagName('a'));
+console.log(document.querySelectorAll('a.link'));
 
-// Use IDs when you want one specific element and the others when you want many
+var header = document.getElementById('header');
+var headerLinks = header.getElementsByTagName('a');
+console.log(headerLinks);
 
-// Modifying many elements with loops
-for (var i = 0; i < anchors.length; i++) {
-    // anchors[i].innerHTML = 'You got hacked';
+
+for (var i = 0; i < headerLinks.length; i++) {
+    headerLinks[i].style.color = 'salmon';
 }
 
-// ----
-
-var bannerButton = document.getElementById('bannerButton');
-bannerButton.onclick = function() {
-    alert('You clicked me!');
-};
-
-var banner = document.getElementById('banner');
-banner.onclick = function() {
-    alert('And me!');
-};
+header.id = 'something';
