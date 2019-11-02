@@ -1,0 +1,25 @@
+svg {
+    width: 100%;
+    height: 400px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+.green-circle {
+    fill: mediumspringgreen;
+    animation-name: slide;
+    animation-duration: 1s;
+}
+
+#canvas {
+    width: 500px;
+    height: auto;
+}

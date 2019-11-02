@@ -1,0 +1,26 @@
+@keyframes slide {
+    0% {
+        transform: translateX(0px);
+        background-color: salmon;
+    }
+
+    100% {
+        transform: translateX(400px);
+        background-color: blue;
+    }
+}
+
+#box {
+    background-color: salmon;
+    width: 200px;
+    height: 200px;
+}
+
+.animate {
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.49,1.71,.62,-0.88);
+    /* animation-fill-mode: forwards;
+    animation-iteration-count: 5;
+    animation-direction: alternate; */
+}
